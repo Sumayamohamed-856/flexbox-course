@@ -1,117 +1,375 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <title></title>
-
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-        crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 2.</title>
     <style>
-        html {
-            font-family: 'Oxygen', sans-serif;
+        .flex-one{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 650px;
         }
-        body {
-            margin: 0px;
+
+        .block1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+       }
+
+       .flex-two{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .navbar {
-            background: #415068;
+
+        .block2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            margin: 2px;
+            
+       }
+
+       .flex-three{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
         }
-        .navbar div {
-            display: none;
+
+        .block3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            margin: 2px;
+            
+       }
+
+       .flex-four{
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .navbar .toggle,
-        .navbar .brand {
-            display: inline-block;
+
+
+
+        .four-flex{
+            margin: 5px;
+            height: 100px;
+            width: 100px;
+            background-color: #3d8b6d;
+            
+            
         }
-        .navbar .link {
-            display: block;
-            text-align: center;
-            padding: 1em;
-            text-decoration: none;
-            background: #223047;
-            color: white;
+
+        .flex-five{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            margin-left: 20px;
+            margin-top: 100px;
         }
-        .navbar .link:hover,
-        .navbar .link:active {
-            color:  #223047;
-            background: white;
+
+        #grow{
+            flex-grow: 2;
         }
-        .navbar .brand {
-            width: 10em;
-            text-align: center;
-            padding: 1em;
-            color: white;
+
+        .item{
+            background-color: #0b6643;
+            width: 100px;
+            height: 100px;
+            margin: 2px;
         }
-        .navbar a {
-            text-decoration: none;
+
+        .flex-six{
+            height: 400px;
+            width: 500px;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
         }
-        .navbar .toggle {
-            padding: 1em;
-            color: black;
+
+        .one{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+           
         }
-        @media (min-width: 48em) {
-            .navbar {
-                display: flex;
-            }
-            .navbar .left,
-            .navbar .right {
-                display: flex;
-                flex: 1;
-            }
-            .navbar .link {
-                width: auto;
-            }
-            .navbar .right {
-                justify-content: flex-end;
-            }
-            .navbar .toggle {
-                display: none;
-            }
+
+        .one-div{
+            background-color: #0b6643;
+            height: 100px;
+            width: 100px;
         }
-        @media (min-width: 48em) {
-            .navbar div {
-                display: flex;
-            }
+
+        .two{
+            display: flex;
+            justify-content: space-between;
+            background-color: #d6d6d6; 
+            margin-bottom: 20px;
         }
-        @media (max-width: 48em) {
-            .navbar.active .toggle {
-                background: #223047;
-                color: white;
-            }
-            .navbar .brand {
-                text-align: left;
-            }
-            .navbar.active div {
-                display: block;
-            }
+
+        .two-div{
+            background-color: greenyellow;
+            height: 100px;
+            width: 100px;
         }
+
+        .three{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .three-div{
+            background-color: lightgreen;
+            height: 100px;
+            width: 100px;
+        }
+
+        .flex-seven {
+            height: 400px;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            margin-top: 100px;
+           
+        }
+
+        .div-one{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+
+        }
+
+        .square-one{
+            background-color: #0b6643;
+            height: 200px;
+            width: 100px;
+        }
+      
+        .div-two{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+          
+        }
+
+        .square-two{
+            background-color: #3d8b6d;
+            height: 200px;
+            width: 100px;
+        }
+       
+        .div-three{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+           
+            
+        }
+
+        .square-three{
+            height: 200px;
+            width: 100px;
+            background-color: #0b6643;
+        }
+       
+        .div-four{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+         
+        }
+
+        .square{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+        }
+
+        .flex-eight{
+            display: flex;
+            width: 400px;
+            background-color:  #eeeeee;
+            height: 300px;
+            margin-top: 100px;
+        }
+
+        .eight-one{
+            display: flex;
+            align-items: center;
+           
+        }
+
+        .one-eight{
+            height: 100px;
+            width: 100px;
+            background-color: #3d8b6d;
+        }
+
+        
+        .eight-two{
+            display: flex;
+            align-items: flex-end; 
+          
+
+        }
+
+        .two-eight{
+            height: 100px;
+            width: 100px;
+            background-color: #0b6643;
+            
+        }
+
+        
+
+        .eight-three{
+            display: flex;
+            align-items: flex-start;
+            height: 100px;
+            width: 100px;
+            background-color: #0b6643;
+            
+        }
+
+        .three-eight{
+            height: 100px;
+            width: 100px;
+            background-color: #3d8b6d;
+        }
+
+        .flex-nine{
+            display: flex;
+            width: 450px;
+            height: 250px;
+            background-color: #eeeeee;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            margin-top: 100px;
+        }
+
+        .nine-one{
+            height: 100px;
+            width: 100px;
+            background-color: #3d8b6d;
+        }
+
+        #nine{
+            align-self: flex-end;
+        }
+       
     </style>
 </head>
-
 <body>
-    <div class="navbar">
-        <a href="#" class="toggle" id="navHamburger">
-            <i class="fas fa-bars"></i>
-        </a>
-        <a href="#" class="brand">MyName</a>
-        <div class="left">
-            <a href="#" class="link">Link 1</a>
-            <a href="#" class="link">Link 2</a>
+    <div class="flex-one">
+       <div class="block1"></div>
+       <div class="block1"></div>
+       <div class="block1"></div>
+    </div>
+
+    <div class="flex-two">
+        <div class="block2"></div>
+        <div class="block2"></div>
+        <div class="block2"></div>
+    </div>
+
+    <div class="flex-three">
+        <div class="block3">1</div>
+        <div class="block3">2</div>
+        <div class="block3">3</div>
+    </div>
+
+    <div class="flex-four">
+
+        <div class="four-flex"></div>
+        <div class="four-flex"></div>
+        <div class="four-flex"></div>
+        <div class="four-flex"></div>
+
+    </div>
+
+    <div class="flex-five">
+        <div class="item"></div>
+        <div class="item" id="grow"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="flex-six">
+        <div class="one">
+            <div class="one-div"></div>
+            <div class="one-div"></div>
+            <div class="one-div"></div>
         </div>
-        <div class="right">
-            <a href="#" class="link">Link 3</a>
+        <div class="two">
+            <div class="two-div"></div>
+            <div class="two-div"></div>
+            <div class="two-div"></div>
+        </div>
+        <div class="three">
+            <div class="three-div"></div>
+            <div class="three-div"></div>
+            <div class="three-div"></div>
         </div>
     </div>
+
+    <div class="flex-seven">
+        <div class="div-one">
+            <div class="square-one"></div>
+        </div>
+        <div class="div-two">
+            <div class="square-two"></div>
+        </div>
+        <div class="div-three">
+            <div class="square-three"></div>
+        </div>
+        <div class="div-four">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+
+    <div class="flex-eight">
+        <div class="eight-one">
+            <div class="one-eight"></div>
+        </div>
+        <div class="eight-two">
+            <div class="two-eight"></div>
+        </div>
+        <div class="eight-three">
+            <div class="three-eight"></div>
+        </div>
+    </div>
+
+    <div class="flex-nine">
+        <div class="nine-one"></div>
+        <div class="nine-one"></div>
+        <div class="nine-one" id="nine"></div>
+        <div class="nine-one" ></div>
+    </div>
+
 </body>
-
-<script>
-    const navHamburger = document.querySelector('#navHamburger');
-    navHamburger.addEventListener('click', (e) => {
-        navHamburger.parentElement.classList.toggle('active');
-    })
-</script>
-
 </html>
